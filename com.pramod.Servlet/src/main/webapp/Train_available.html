@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Train Availability - IRCTC Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 600px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .availability-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0.3rem;
+      display: inline-block;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .search-btn {
+      width: 100%;
+      padding: 0.7rem;
+      background-color: #007bff;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .search-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .summary {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .train-list {
+      margin-top: 20px;
+    }
+
+    .train-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .train-name {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .seat-availability {
+      font-size: 0.9rem;
+      color: #007bff;
+    }
+
+    .seat-available {
+      color: #28a745;
+    }
+
+    .seat-unavailable {
+      color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Train Availability</h1>
+    <form class="availability-form">
+      <div class="form-group">
+        <label for="from">From</label>
+        <input type="text" id="from" placeholder="Enter Departure Station">
+      </div>
+      <div class="form-group">
+        <label for="to">To</label>
+        <input type="text" id="to" placeholder="Enter Arrival Station">
+      </div>
+      <div class="form-group">
+        <label for="date">Date of Journey</label>
+        <input type="date" id="date">
+      </div>
+      <div class="form-group">
+        <label for="class">Class</label>
+        <select id="class">
+          <option value="1A">First AC (1A)</option>
+          <option value="2A">Second AC (2A)</option>
+          <option value="3A">Third AC (3A)</option>
+          <option value="SL">Sleeper (SL)</option>
+        </select>
+      </div>
+      <button type="submit" class="search-btn">Check Availability</button>
+    </form>
+  </div>
+
+  <!-- Summary Section -->
+  <div class="container summary">
+    Total Trains Available: <span>4</span> | Total Seats Available: <span>120</span>
+  </div>
+
+  <!-- Train List -->
+  <div class="container train-list">
+    <h2>Available Trains</h2>
+    <div class="train-item">
+      <div class="train-name">Rajdhani Express</div>
+      <div class="seat-availability seat-available">Seats Available: 35</div>
+    </div>
+    <div class="train-item">
+      <div class="train-name">Shatabdi Express</div>
+      <div class="seat-availability seat-unavailable">No Seats Available</div>
+    </div>
+    <div class="train-item">
+      <div class="train-name">Duronto Express</div>
+      <div class="seat-availability seat-available">Seats Available: 50</div>
+    </div>
+    <div class="train-item">
+      <div class="train-name">Garib Rath</div>
+      <div class="seat-availability seat-available">Seats Available: 35</div>
+    </div>
+  </div>
+</body>
+</html>

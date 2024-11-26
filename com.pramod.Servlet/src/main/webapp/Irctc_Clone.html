@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCTC Clone</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #0056a3;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background-color: #e9ecef;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .hero form {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero form input, .hero form button {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .hero form input {
+            width: 180px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .hero form button {
+            background-color: #0056a3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100px;
+        }
+
+        .hero form button:hover {
+            background-color: #004080;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">IRCTC</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Login</a>
+            <a href="#">Sign Up</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Book Your Train Tickets</h1>
+        <form action="irctc_clone" method="POST">
+            <input type="text" placeholder="From" required>
+            <input type="text" placeholder="To" required>
+            <input type="date" required>
+            <button type="submit">Search Trains</button>
+        </form>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section offers">
+            <h2>Latest Offers</h2>
+            <p>Get exciting offers on train tickets! Book early to save more.</p>
+        </section>
+        <section class="section services">
+            <h2>Our Services</h2>
+            <p>Learn about catering, tourism, and e-ticketing services provided by IRCTC.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 IRCTC Clone. All rights reserved.</p>
+        <a href="#">FAQ</a> | <a href="#">Contact Us</a> | <a href="#">Privacy Policy</a>
+    </footer>
+</body>
+</html>
